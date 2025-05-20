@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>Access Blocked</title>  
+  <script>  
+    // Check for Google Drive in the hostname or path  
+    if (  
+      window.location.hostname.includes("google.com") ||  
+      window.location.href.includes("/drive")  
+    ) {  
+      window.location.href = "'https://teejbautista.github.io/mock-onedrive'";  
+    }  
+  </script>  
+</head>  
+<body>  
+  <h1>This app is blocked. Use OneDrive instead.</h1>  
+  <button onclick="window.location.href='https://teejbautista.github.io/mock-onedrive'">  
+    Go to OneDrive  
+  </button>  
+</body>   
+</html>  
