@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Trust Approved Tools Portal</title>
+    <title>Premier Technology Solution Approved Tools Portal</title>
     <style>
-        /* Custom CSS - ZTA Project! */
+        /* Custom CSS - Professional Style */
         :root {
-            --primary-color: #2b579a; /* Microsoft blue */
+            --primary-color: #2b579a; /* Premier Tech Blue */
             --secondary-color: #f3f6f9;
+            --accent-color: #ff8c00; /* Premier Tech Orange */
         }
 
         body {
@@ -27,10 +28,25 @@
         .header {
             text-align: center;
             padding: 2rem;
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             color: white;
             border-radius: 10px;
             margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
         .tool-grid {
@@ -42,14 +58,16 @@
 
         .tool-card {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 25px;
+            border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.2s;
+            border-left: 4px solid var(--primary-color);
         }
 
         .tool-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
         .tool-logo {
@@ -62,19 +80,33 @@
         .request-button {
             background: var(--primary-color);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
             margin-top: 2rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .request-button:hover {
+            background: var(--accent-color);
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🔒 Approved Tools Portal</h1>
-            <p>Secure solutions for your work needs</p>
+            <h1>
+                <img src="https://cdn-icons-png.flaticon.com/512/1067/1067555.png" alt="Logo" class="brand-logo">
+                Premier Technology Solution<br>Approved Tools Portal
+            </h1>
+            <p>Secure and compliant solutions for your daily operations</p>
         </div>
 
         <div class="tool-grid">
@@ -82,7 +114,7 @@
             <div class="tool-card">
                 <img src="https://img.icons8.com/color/96/onedrive.png" alt="OneDrive" class="tool-logo">
                 <h3>Microsoft OneDrive</h3>
-                <p>Secure cloud storage for company files</p>
+                <p>Enterprise-grade secure cloud storage solution</p>
                 <a href="https://onedrive.live.com" target="_blank">Access OneDrive</a>
             </div>
 
@@ -90,7 +122,7 @@
             <div class="tool-card">
                 <img src="https://img.icons8.com/color/96/microsoft-teams.png" alt="Teams" class="tool-logo">
                 <h3>Microsoft Teams</h3>
-                <p>Collaborate securely with your team</p>
+                <p>Secure collaboration and communication platform</p>
                 <a href="https://teams.microsoft.com" target="_blank">Open Teams</a>
             </div>
 
@@ -106,17 +138,16 @@
         <div style="text-align: center; margin-top: 40px;">
             <button class="request-button" onclick="showRequestForm()">Request New Tool</button>
             <div id="request-form" style="display: none; margin-top: 20px;">
-                <p>Contact IT: security@yourcompany.com</p>
+                <p>Contact IT Security Team: <br>it-security@premiertechsolution.com</p>
             </div>
         </div>
     </div>
 
     <script>
-        // Simple JavaScript for demo purposes
         function showRequestForm() {
             const form = document.getElementById('request-form');
             form.style.display = 'block';
-            alert("Please email security@yourcompany.com with your tool request!");
+            alert("Please email it-security@premiertechsolution.com with:\n- Tool Name\n- Business Justification\n- Department");
         }
     </script>
 </body>
