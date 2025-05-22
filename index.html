@@ -1,11 +1,123 @@
-<!-- Mock OneDrive Page -->  
-<!DOCTYPE html>  
-<html>  
-<head>  
-  <title>Approved: OneDrive</title>  
-</head>  
-<body>  
-  <h1>Welcome to OneDrive</h1>  
-  <p>Securely store files here.</p>  
-</body>  
-</html>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Trust Approved Tools Portal</title>
+    <style>
+        /* Custom CSS - ZTA Project! */
+        :root {
+            --primary-color: #2b579a; /* Microsoft blue */
+            --secondary-color: #f3f6f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+
+        .request-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Approved Tools Portal</h1>
+            <p>Secure solutions for your work needs</p>
+        </div>
+
+        <div class="tool-grid">
+            <!-- Microsoft OneDrive Card -->
+            <div class="tool-card">
+                <img src="https://img.icons8.com/color/96/onedrive.png" alt="OneDrive" class="tool-logo">
+                <h3>Microsoft OneDrive</h3>
+                <p>Secure cloud storage for company files</p>
+                <a href="https://onedrive.live.com" target="_blank">Access OneDrive</a>
+            </div>
+
+            <!-- Microsoft Teams Card -->
+            <div class="tool-card">
+                <img src="https://img.icons8.com/color/96/microsoft-teams.png" alt="Teams" class="tool-logo">
+                <h3>Microsoft Teams</h3>
+                <p>Collaborate securely with your team</p>
+                <a href="https://teams.microsoft.com" target="_blank">Open Teams</a>
+            </div>
+
+            <!-- SharePoint Card -->
+            <div class="tool-card">
+                <img src="https://img.icons8.com/color/96/sharepoint.png" alt="SharePoint" class="tool-logo">
+                <h3>SharePoint Online</h3>
+                <p>Central document management system</p>
+                <a href="https://yourcompany.sharepoint.com" target="_blank">Access SharePoint</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="request-button" onclick="showRequestForm()">Request New Tool</button>
+            <div id="request-form" style="display: none; margin-top: 20px;">
+                <p>Contact IT: security@yourcompany.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript for demo purposes
+        function showRequestForm() {
+            const form = document.getElementById('request-form');
+            form.style.display = 'block';
+            alert("Please email security@yourcompany.com with your tool request!");
+        }
+    </script>
+</body>
+</html>
